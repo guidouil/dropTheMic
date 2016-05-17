@@ -1,16 +1,4 @@
 Template.microphone.helpers({
-  isMicMoving: function () {
-    return Session.get('isMicMoving');
-  },
-  dropResult: function () {
-    return Session.get('dropResult') || '';
-  },
-  dropCount: function () {
-    return Session.get('dropCount') || 0;
-  },
-  failCount: function () {
-    return Session.get('failCount') || 0;
-  }
 });
 
 Template.microphone.events({
@@ -32,13 +20,13 @@ Template.microphone.events({
         }
         setTimeout(function () {
           Router.go('dropped');
-        }, 500);
+        }, 300);
       } else {
         Session.set('dropResult', 'Failed');
         Session.set('failCount', Session.get('failCount') + 1);
         setTimeout(function () {
           Router.go('failed');
-        }, 500);
+        }, 300);
       }
     }
   },
