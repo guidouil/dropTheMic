@@ -1,0 +1,33 @@
+.dropZone {
+  margin: 0 auto;
+  width: 232px;
+  height: 100%;
+  background-color: #e03997;
+}
+.winZone {
+  margin: 0 auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background-color: #00B5AD;
+  width: 242px;
+  opacity: 0.6;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+.mic-icon {
+  z-index: 3;
+}
+.dropResult {
+  position: absolute;
+  top: 0;
+  left: 1%;
+  background-color: #00B5AD;
+}
+.dropIt {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #00B5AD;
+  cursor: pointer;
+  padding: 5px;
+  border: 5px solid #e03997;
+}
