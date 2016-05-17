@@ -69,6 +69,7 @@ getRandomInt = function (min, max) {
 };
 
 $(window).resize(function () {
+  Router.go('home');
   Meteor._reload.reload();
 });
 
