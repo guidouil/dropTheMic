@@ -1,5 +1,12 @@
 <template name='audio'>
-  <audio autoplay loop>
-    <source src="{{sound}}" type="audio/mpeg">
-  </audio>
+  {{#unless isSoundMuted}}
+    <audio autoplay loop>
+      <source src="{{sound}}" type="audio/mpeg">
+    </audio>
+  {{/unless}}
+</template>
+
+<template name="audioBtn">
+  <div class="audioBtn" style="background-image: url('{{audioBtnImg}}')">
+  </div>
 </template>

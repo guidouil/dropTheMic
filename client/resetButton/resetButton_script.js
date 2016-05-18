@@ -5,5 +5,7 @@ Template.resetButton.events({
     Session.set('dropDuration', 1000);
     Session.set('winZoneHeight', 200);
     Router.go('home');
+    Meteor._reload.reload();
+    return;
   }
 });

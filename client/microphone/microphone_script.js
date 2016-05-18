@@ -1,4 +1,19 @@
-Template.microphone.helpers({
+Template.microphone.onRendered(function () {
+  $('body').css({'background-image': 'url(\'speaker.gif\')', 'background-repeat': 'repeat'});
+  var dropZoneHeight = $(document).height();
+  Session.set('dropZoneHeight', dropZoneHeight);
+  Session.set('winDrop', getRandomInt(0, dropZoneHeight-Session.get('winZoneHeight')-88));
+  $('.winZone').css({top: Session.get('winDrop'), height: Session.get('winZoneHeight')});
+  $('.dropZone').css({height: dropZoneHeight});
+  setTimeout(function () {
+    $('.mic-icon').velocity('stop').velocity({
+      translateY: dropZoneHeight-88 + 'px'
+    }, {
+      loop: true,
+      duration: Session.get('dropDuration')
+    });
+    Session.set('isMicMoving', true);
+  }, 200);
 });
 
 Template.microphone.events({
@@ -16,7 +31,6 @@ Template.microphone.events({
           Session.set('dropDuration', Session.get('dropDuration') - 25);
         }
         if (Session.get('winZoneHeight') > 100) {
-          console.log(Session.get('winZoneHeight') > 100);
           Session.set('winZoneHeight', Session.get('winZoneHeight') - 5);
         }
         setTimeout(function () {
@@ -29,26 +43,16 @@ Template.microphone.events({
           Router.go('failed');
         }, 300);
       }
+    } else {
+      $('.mic-icon').velocity({
+        translateY: dropZoneHeight-88 + 'px'
+      }, {
+        loop: true,
+        duration: Session.get('dropDuration')
+      });
+      Session.set('isMicMoving', true);
     }
   },
-});
-
-Template.microphone.onRendered(function () {
-  $('body').css({'background-image': 'url(\'speaker.gif\')', 'background-repeat': 'repeat'});
-  var dropZoneHeight = $(document).height();
-  Session.set('dropZoneHeight', dropZoneHeight);
-  Session.set('winDrop', getRandomInt(0, dropZoneHeight-Session.get('winZoneHeight')-88));
-  $('.winZone').css({top: Session.get('winDrop'), height: Session.get('winZoneHeight')});
-  $('.dropZone').css({height: dropZoneHeight});
-  setTimeout(function () {
-    $('.mic-icon').velocity({
-      translateY: dropZoneHeight-88 + 'px'
-    }, {
-      loop: true,
-      duration: Session.get('dropDuration')
-    });
-  }, 200);
-  Session.set('isMicMoving', true);
 });
 
 getRandomInt = function (min, max) {
@@ -59,7 +63,6 @@ getRandomInt = function (min, max) {
 
 $(window).resize(function () {
   Router.go('home');
-  Meteor._reload.reload();
 });
 
 $(window).keyup(function (evt) {
