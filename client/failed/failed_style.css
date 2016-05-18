@@ -1,0 +1,12 @@
+.title-failed {
+  background-color: #e03997;
+  color: #00B5AD;
+  padding: 5px;
+}
+.score-failed {
+  background-color: #e03997;
+  color: #FFFFFF;
+  font-size: 1.5em;
+  padding: 5px;
+  font-family: 'VT323';
+}

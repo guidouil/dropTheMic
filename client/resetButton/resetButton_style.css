@@ -1,0 +1,16 @@
+.resetDrop {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 2em;
+  background-color: #e03997;
+  padding: 5px;
+  border: 5px solid #00B5AD;
+  color: #00B5AD;
+  text-align: center;
+  cursor: pointer;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}

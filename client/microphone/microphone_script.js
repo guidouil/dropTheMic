@@ -9,13 +9,14 @@ Template.microphone.events({
       Session.set('isMicMoving', false);
       $('.mic-icon').velocity('stop');
       var micPosition = $('.mic-icon').position();
-      if (micPosition.top >= winDrop && micPosition.top <= winDrop + Session.get('winZoneHeight')-88) {
+      if (micPosition.top >= winDrop && micPosition.top <= winDrop + Session.get('winZoneHeight')-87) {
         Session.set('dropResult', 'Dropped');
         Session.set('dropCount', Session.get('dropCount') + 1);
         if (Session.get('dropDuration') > 500) {
           Session.set('dropDuration', Session.get('dropDuration') - 25);
         }
-        if (Session.get('winZoneHeight') > 90) {
+        if (Session.get('winZoneHeight') > 100) {
+          console.log(Session.get('winZoneHeight') > 100);
           Session.set('winZoneHeight', Session.get('winZoneHeight') - 5);
         }
         setTimeout(function () {

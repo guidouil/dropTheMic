@@ -8,9 +8,11 @@ Template.home.events({
 });
 
 Template.home.onRendered(function () {
-  Session.set('dropCount', 0);
-  Session.set('failCount', 0);
-  Session.set('dropDuration', 1000);
-  Session.set('winZoneHeight', 200);
+  if (!Session.get('dropDuration') && !Session.get('winZoneHeight')) {
+    Session.set('dropCount', 0);
+    Session.set('failCount', 0);
+    Session.set('dropDuration', 1000);
+    Session.set('winZoneHeight', 200);
+  }
   $('body').css({'background-image': 'url(\'captain-drop.gif\')', 'background-repeat': 'repeat'});
 });
