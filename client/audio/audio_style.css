@@ -1,7 +1,8 @@
 .audioBtn {
   position: absolute;
-  top: 30%;
-  right: 0;
-  width: 84px;
-  height: 99px;
+  top: 42%;
+  left: 0;
+  width: 42px;
+  height: 50px;
+  background-size: cover;
 }
