@@ -1,4 +1,9 @@
 <template name='microphone'>
+  {{#if greater dropCount 0}}
+    <div class="dropResult">
+      {{dropCount}}
+    </div>
+  {{/if}}
   <div class="dropZone">
     <img class="image centered mic-icon" src="/microphone-icon.png" alt="microphone">
   </div>

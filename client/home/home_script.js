@@ -1,4 +1,10 @@
 Template.home.helpers({
+  dropCount: function () {
+    return Session.get('dropCount') || 0;
+  },
+  failCount: function () {
+    return Session.get('failCount') || 0;
+  }
 });
 
 Template.home.events({

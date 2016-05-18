@@ -7,3 +7,7 @@ UI.registerHelper('plural', function (number) {
     return 's';
   }
 });
+
+UI.registerHelper('greater', function (a, b) {
+  return a > b;
+});

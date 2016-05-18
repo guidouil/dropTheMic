@@ -16,6 +16,15 @@ Template.microphone.onRendered(function () {
   }, 200);
 });
 
+Template.microphone.helpers({
+  dropCount: function () {
+    return Session.get('dropCount') || 0;
+  },
+  failCount: function () {
+    return Session.get('failCount') || 0;
+  }
+});
+
 Template.microphone.events({
   'click .dropIt': function (event, instance) {
     var dropZoneHeight = Session.get('dropZoneHeight');

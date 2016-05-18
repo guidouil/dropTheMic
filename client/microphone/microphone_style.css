@@ -19,8 +19,12 @@
 .dropResult {
   position: absolute;
   top: 0;
-  left: 1%;
+  left: 0;
   background-color: #00B5AD;
+  font-size: 4em;
+  color: #e03997;
+  padding: 5px;
+  font-weight: bold;
 }
 .dropIt {
   position: absolute;
