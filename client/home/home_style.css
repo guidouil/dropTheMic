@@ -1,6 +1,10 @@
 .title, .help {
   background-color: #00B5AD;
   padding: 5px;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 .help {
   color: #FFFFFF;

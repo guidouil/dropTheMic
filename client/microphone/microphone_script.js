@@ -24,7 +24,7 @@ Template.microphone.events({
       Session.set('isMicMoving', false);
       $('.mic-icon').velocity('stop');
       var micPosition = $('.mic-icon').position();
-      if (micPosition.top >= winDrop && micPosition.top <= winDrop + Session.get('winZoneHeight')-87) {
+      if (micPosition.top >= winDrop && micPosition.top <= winDrop + Session.get('winZoneHeight')-88) {
         Session.set('dropResult', 'Dropped');
         Session.set('dropCount', Session.get('dropCount') + 1);
         if (Session.get('dropDuration') > 500) {

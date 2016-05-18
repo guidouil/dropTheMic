@@ -10,6 +10,9 @@ Template.dropped.helpers({
 Template.dropped.events({
   'click .iWannaDropIt': function () {
     Router.go('microphone');
+  },
+  'click h1': function () {
+    Router.go('/');
   }
 });
 

@@ -10,6 +10,9 @@ Template.failed.helpers({
 Template.failed.events({
   'click .iWannaDropIt': function () {
     Router.go('microphone');
+  },
+  'click h1': function () {
+    Router.go('/');
   }
 });
 

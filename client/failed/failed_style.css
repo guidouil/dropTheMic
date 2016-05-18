@@ -2,6 +2,10 @@
   background-color: #e03997;
   color: #00B5AD;
   padding: 5px;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 .score-failed {
   background-color: #e03997;
