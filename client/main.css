@@ -7,14 +7,14 @@ body {
   background-repeat: repeat;
   z-index: 0;
   margin: 0;
-  font-family: 'VT323';
+  font-family: 'VT323', 'VT-100', Terminal, monospace;
 }
 .container {
   width: 100%;
   height: 100%;
 }
 h1 {
-  font-family: 'VT323';
+  font-family: 'VT323', 'VT-100', Terminal, monospace;
   color: #e03997;
   font-size: 3em;
   padding: 5px;

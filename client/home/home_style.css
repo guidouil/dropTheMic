@@ -9,7 +9,7 @@
 .help {
   color: #FFFFFF;
   font-size: 2em;
-  font-family: 'VT323';
+  font-family: 'VT323', 'VT-100', Terminal, monospace;
 }
 .iWannaDropIt {
   position: absolute;
