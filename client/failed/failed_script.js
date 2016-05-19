@@ -17,7 +17,7 @@ Template.failed.events({
 });
 
 Template.failed.onRendered(function () {
-  $('body').css({'background-image': 'url(\'minion-drop.gif\')', 'background-repeat': 'repeat'});
+  $('body').css({'background-color': '#e03997', 'background-image': 'url(\'banana-fail.gif\')', 'background-repeat': 'repeat'});
 });
 
 $(window).keyup(function (evt) {

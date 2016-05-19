@@ -1,8 +1,8 @@
 Template.microphone.onRendered(function () {
   if (Meteor.isCordova) {
-    $('body').css({'background-image': 'none'});
+    $('body').css({'background-color': '#00B5AD', 'background-image': 'none'});
   } else {
-    $('body').css({'background-image': 'url(\'speaker.gif\')', 'background-repeat': 'repeat'});
+    $('body').css({'background-color': '#00B5AD', 'background-image': 'url(\'speaker.gif\')', 'background-repeat': 'repeat'});
   }
   var dropZoneHeight = $(document).height();
   Session.set('dropZoneHeight', dropZoneHeight);

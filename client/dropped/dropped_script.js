@@ -17,7 +17,7 @@ Template.dropped.events({
 });
 
 Template.dropped.onRendered(function () {
-  $('body').css({'background-image': 'url(\'obama-drop.gif\')', 'background-repeat': 'repeat'});
+  $('body').css({'background-color': '#00B5AD', 'background-image': 'url(\'obama-drop.gif\')', 'background-repeat': 'repeat'});
 });
 
 $(window).keyup(function (evt) {
