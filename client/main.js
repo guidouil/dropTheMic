@@ -11,3 +11,7 @@ UI.registerHelper('plural', function (number) {
 UI.registerHelper('greater', function (a, b) {
   return a > b;
 });
+
+UI.registerHelper('isMobile', function () {
+  return Meteor.isCordova;
+});

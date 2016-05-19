@@ -1,5 +1,9 @@
 Template.microphone.onRendered(function () {
-  $('body').css({'background-image': 'url(\'speaker.gif\')', 'background-repeat': 'repeat'});
+  if (Meteor.isCordova) {
+    $('body').css({'background-image': 'none'});
+  } else {
+    $('body').css({'background-image': 'url(\'speaker.gif\')', 'background-repeat': 'repeat'});
+  }
   var dropZoneHeight = $(document).height();
   Session.set('dropZoneHeight', dropZoneHeight);
   Session.set('winDrop', getRandomInt(0, dropZoneHeight-Session.get('winZoneHeight')-88));

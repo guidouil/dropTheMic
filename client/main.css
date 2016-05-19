@@ -2,6 +2,7 @@ html.ios, html.ios body{
   height: 100%!important;
 }
 body {
+  background-color: #00B5AD;
   background-image: url('speaker.gif');
   background-repeat: repeat;
   z-index: 0;
