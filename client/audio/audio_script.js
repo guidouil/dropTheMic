@@ -13,6 +13,11 @@ Template.audio.onRendered(function () {
 Template.audio.helpers({
   isSoundMuted: function () {
     return Session.equals('muted', true);
+  },
+  formatUrl: function (url) {
+    if (url) {
+      return Meteor.absoluteUrl() + url;
+    }
   }
 });
 

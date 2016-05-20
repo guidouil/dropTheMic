@@ -1,7 +1,7 @@
 <template name='audio'>
   {{#unless isSoundMuted}}
     <audio autoplay loop id="audioPlayer">
-      <source src="{{sound}}" type="audio/mpeg">
+      <source src="{{formatUrl sound}}" type="audio/mpeg">
     </audio>
   {{/unless}}
 </template>
