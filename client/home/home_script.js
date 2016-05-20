@@ -20,5 +20,5 @@ Template.home.onRendered(function () {
     Session.set('dropDuration', 1000);
     Session.set('winZoneHeight', 200);
   }
-  $('body').css({'background-image': 'url(\'captain-drop.gif\')', 'background-repeat': 'repeat'});
+  $('body').css({'background-image': 'url(\'kid-mic-drop.gif\')', 'background-repeat': 'repeat'});
 });

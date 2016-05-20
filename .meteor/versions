@@ -1,4 +1,5 @@
 allow-deny@1.0.4
+appcache@1.0.10
 autoupdate@1.2.9
 babel-compiler@6.6.4
 babel-runtime@0.1.8
