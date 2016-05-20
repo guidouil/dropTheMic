@@ -1,4 +1,10 @@
 Template.microphone.onRendered(function () {
+  if (!Session.get('dropDuration') || !Session.get('winZoneHeight')) {
+    Session.set('dropCount', 0);
+    Session.set('failCount', 0);
+    Session.set('dropDuration', 1000);
+    Session.set('winZoneHeight', 200);
+  }
   if (Meteor.isCordova) {
     $('body').css({'background-color': '#00B5AD', 'background-image': 'none'});
   } else {
@@ -17,7 +23,7 @@ Template.microphone.onRendered(function () {
       duration: Session.get('dropDuration')
     });
     Session.set('isMicMoving', true);
-  }, 200);
+  }, 400);
 });
 
 Template.microphone.helpers({
@@ -57,7 +63,7 @@ Template.microphone.events({
         }, 300);
       }
     } else {
-      $('.mic-icon').velocity({
+      $('.mic-icon').velocity('stop').velocity({
         translateY: dropZoneHeight-88 + 'px'
       }, {
         loop: true,

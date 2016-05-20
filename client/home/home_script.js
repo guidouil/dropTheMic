@@ -14,7 +14,7 @@ Template.home.events({
 });
 
 Template.home.onRendered(function () {
-  if (!Session.get('dropDuration') && !Session.get('winZoneHeight')) {
+  if (!Session.get('dropDuration') || !Session.get('winZoneHeight')) {
     Session.set('dropCount', 0);
     Session.set('failCount', 0);
     Session.set('dropDuration', 1000);
