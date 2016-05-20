@@ -1,6 +1,6 @@
 {
-  "short_name": "DROP THE MIC",
   "name": "DROP THE MIC",
+  "short_name": "dropTheMic",
   "icons": [
     {
       "src": "icon-96x96.png",
