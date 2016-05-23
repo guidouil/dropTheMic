@@ -24,9 +24,9 @@ Template.audio.helpers({
 Template.audioBtn.helpers({
   audioBtnImg: function () {
     if (Session.equals('muted', false)) {
-      return 'mute.png';
-    } else {
       return 'unmute.png';
+    } else {
+      return 'mute.png';
     }
   }
 });
