@@ -5,7 +5,7 @@ App.info({
   author: 'guillaume.darbonne@gmail.com',
   email: 'guillaume.darbonne@gmail.com',
   website: 'https://dropthemic.win',
-  version: '1.0'
+  version: '1.1'
 });
 
 App.icons({
